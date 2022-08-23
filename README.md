@@ -1,0 +1,342 @@
+import java.io.*;
+import java.util.*;
+class TicTacToe
+{   
+    public static void main(String[] args) 
+    throws IOException
+    { 
+        int array[][] = new int[3][3];
+        array[0][0] = 1;
+        array[0][1] = 2;
+        array[0][2] = 3;
+        array[1][0] = 4;
+        array[1][1] = 5;
+        array[1][2] = 6;
+        array[2][0] = 7;
+        array[2][1] = 8;
+        array[2][2] = 9;
+       for (int[] row : array)
+       System.out.println(Arrays.toString(row));
+       int array1[][] = new int[3][3];
+       
+       int i=0;
+       int j=0;
+       int k=0;
+       int l=0;
+       int m=0;
+       int n=0;
+       int o=0;
+       int p=0;
+       int q=0;
+       
+       
+        array1[0][0] = i;
+        array1[0][1] = j;
+        array1[0][2] = k;
+        array1[1][0] = l;
+        array1[1][1] = m;
+        array1[1][2] = n;
+        array1[2][0] = o;
+        array1[2][1] = p;
+        array1[2][2] = q;
+       for (int[] row : array1)
+       System.out.println(Arrays.toString(row));
+       
+       //Player 1 move 1
+      do{
+       System.out.println("Move for player 1, type the position for your move");
+       int firstmove ;
+       do
+        {
+        Scanner scfirstmove = new Scanner(System.in);
+        firstmove =scfirstmove.nextInt();
+        if(firstmove == 1)
+            {
+              i  = 1;
+            }
+        if( firstmove ==2)
+           {
+              j = 1;
+            }
+        if(firstmove == 3)
+            { 
+              k = 1;
+            }
+        if (firstmove == 4)
+           { 
+              l = 1;
+            }
+        if(firstmove == 5)
+           {
+              m = 1;
+            }
+        if (firstmove == 6)
+            {
+              n = 1;
+            }
+        if (firstmove == 7)
+            {
+                o = 1;
+            }
+        if(firstmove == 8)
+            { 
+              p = 1;
+            }
+        if(firstmove == 9)
+            {
+              q = 1;
+            }
+        if(firstmove >= 10) 
+           {
+               System.out.println("wrong input");
+           } 
+       
+        }while(firstmove >= 10);
+        array1[0][0] = i;
+        array1[0][1] = j;
+        array1[0][2] = k;
+        array1[1][0] = l;
+        array1[1][1] = m;
+        array1[1][2] = n;
+        array1[2][0] = o;
+        array1[2][1] = p;
+        array1[2][2] = q;
+        for (int[] row : array1)
+       System.out.println(Arrays.toString(row));
+        if((i==j) && (j==k) && (i==1))
+        {
+         System.out.println("Player 1 won the game");
+           System.exit(0);
+            
+        }
+        if((i==j) && (j==k) && (i==2))
+        {
+         System.out.println("Player 2 won the game");
+           System.exit(0);
+            
+        }
+       if((i==l) && (l==o) && (i==1))
+        {
+            System.out.println("Player 1 won the game");
+             System.exit(0);
+        }
+        if((i==l) && (l==o) && (i==2))
+        {
+            System.out.println("Player 2 won the game");
+             System.exit(0);
+        }
+        if((i==m) && (m==n) && (i==1))
+        {
+            System.out.println("Player 1 won the game");
+             System.exit(0);
+        }
+         if((i==m) && (m==n) && (i==2))
+        {
+            System.out.println("Player 2 won the game");
+             System.exit(0);
+        }
+        if((l==m) && (m==n) && (l==1))
+        {
+            System.out.println("Player 1 won the game");
+             System.exit(0);
+        }
+        if((l==m) && (m==n) && (l==2))
+        {
+            System.out.println("Player 2 won the game");
+             System.exit(0);
+        }
+        if((o==p) && (p==q) && (o==1))
+        {
+            System.out.println("Player 1 won the game");
+             System.exit(0);
+        }
+         if((o==p) && (p==q) && (o==2))
+        {
+            System.out.println("Player 2 won the game");
+             System.exit(0);
+        }
+        if((j==m) && (p==m) && (j==1))
+        {
+            System.out.println("Player 1 won the game");
+             System.exit(0);
+        }
+        if((j==m) && (p==m) && (j==2))
+        {
+            System.out.println("Player 2 won the game");
+             System.exit(0);
+        }
+        if((k==n) && (n==q) && (k==1))
+        {
+            System.out.println("Player 1  won the game");
+             System.exit(0);
+        }
+         if((k==n) && (n==q) && (k==2))
+        {
+            System.out.println("Player 2 won the game");
+             System.exit(0);
+        }
+         if((k==m) && (m==o) && (k==1))
+        {
+            System.out.println("Player 1 won the game");
+             System.exit(0);
+        }
+         if((k==m) && (m==o) && (k==2))
+        {
+            System.out.println("Player 2 won the game");
+             System.exit(0);
+        }
+        
+        //Player 2 move 1
+
+        System.out.println(" Move for player 2, type the position for your move");
+       int firstmove2 ;
+       do
+    {
+        Scanner scfirstmove2 = new Scanner(System.in);
+        firstmove2 =scfirstmove2.nextInt();
+        if(firstmove2 == 1)
+            {
+              i = 2;
+            }
+        if( firstmove2 ==2)
+           {
+              j = 2;
+            }
+        if(firstmove2 == 3)
+            { 
+              k = 2;
+            }
+        if (firstmove2 == 4)
+           { 
+              l = 2;
+            }
+        if(firstmove2 == 5)
+           {
+              m = 2;
+            }
+        if (firstmove2 == 6)
+            {
+              n = 2;
+            }
+        if (firstmove2 == 7)
+            {
+                o = 2;
+            }
+        if(firstmove2 == 8)
+            { 
+              p = 2;
+            }
+        if(firstmove2 == 9)
+            {
+              q = 2;
+            }
+        if(firstmove2 >= 10) 
+           {
+               System.out.println("wrong input");
+           } 
+       
+        }while(firstmove2 >= 10);
+        
+        array1[0][0] = i;
+        array1[0][1] = j;
+        array1[0][2] = k;
+        array1[1][0] = l;
+        array1[1][1] = m;
+        array1[1][2] = n;
+        array1[2][0] = o;
+        array1[2][1] = p;
+        array1[2][2] = q;
+        for (int[] row : array1)
+       System.out.println(Arrays.toString(row));
+        if((i==j) && (j==k) && (i==1))
+        {
+            System.out.println("Player 1 won the game");
+             System.exit(0);
+        }
+        if((i==j) && (j==k) && (i==2))
+        {
+            System.out.println("Player 2 won the game");
+             System.exit(0);
+        }
+         if((i==l) && (l==o) && (i==1))
+        {
+            System.out.println("Player 1 won the game");
+             System.exit(0);
+        }
+        if((i==l) && (l==o) && (i==2))
+        {
+            System.out.println("Player 2 won the game");
+             System.exit(0);
+        }
+        if((i==m) && (m==n) && (i==1))
+        {
+            System.out.println("Player 1 won the game");
+             System.exit(0);
+        }
+         if((i==m) && (m==n) && (i==2))
+        {
+            System.out.println("Player 2 won the game");
+             System.exit(0);
+        }
+        if((l==m) && (m==n) && (l==1))
+        {
+            System.out.println("Player 1 won the game");
+             System.exit(0);
+        }
+        if((l==m) && (m==n) && (l==2))
+        {
+            System.out.println("Player 2 won the game");
+             System.exit(0);
+        }
+        if((o==p) && (p==q) && (o==1))
+        {
+            System.out.println("Player 1 won the game");
+             System.exit(0);
+        }
+         if((o==p) && (p==q) && (o==2))
+        {
+            System.out.println("Player 2 won the game");
+             System.exit(0);
+        }
+        if((j==m) && (p==m) && (j==1))
+        {
+            System.out.println("Player 1 won the game");
+             System.exit(0);
+        }
+        if((j==m) && (p==m) && (j==2))
+        {
+            System.out.println("Player 2 won the game");
+             System.exit(0);
+        }
+        if((k==n) && (n==q) && (k==1))
+        {
+            System.out.println("Player 1  won the game");
+             System.exit(0);
+        }
+         if((k==n) && (n==q) && (k==2))
+        {
+            System.out.println("Player 2 won the game");
+             System.exit(0);
+        }
+         if((k==m) && (m==o) && (k==1))
+        {
+            System.out.println("Player 1 won the game");
+             System.exit(0);
+        }
+         if((k==m) && (m==o) && (k==2))
+        {
+            System.out.println("Player 2 won the game");
+             System.exit(0);
+        }
+      
+       
+      }while((i!=0) || (j!=0) || (k!=0) || (l!=0) || (m!=0) || (n!=0) || (o!=0) || (p!=0) || (q!=0) );
+      
+       
+     
+        
+       
+     
+       
+    }
+}
